@@ -1,0 +1,133 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #003366;
+    color: #ccc;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 94vh;
+}
+
+.sidebar-item, .dropdown-item {
+    display: block;
+    margin: 15px 0;
+    padding: 10px;
+    border-radius: 5px;
+    color: #ccc;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.sidebar-item.active, .sidebar-item:hover, .dropdown-item:hover {
+    background-color: #fff;
+    color: #003366;
+}
+
+.sidebar-item.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.arrow {
+    margin-left: 5px;
+}
+
+.dropdown-content {
+    display: none;
+    flex-direction: column;
+    background-color: #004080;
+    padding-left: 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.sidebar-item.dropdown.active .dropdown-content {
+    display: flex;
+}
+
+.version {
+    font-size: 0.8em;
+    margin-top: auto;
+    text-align: center;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 50px;
+    background-color: #b5e0fa;
+    display: none; /* Default to not display */
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+.main-content.active-content {
+    display: flex; /* Only display when active */
+}
+
+.content {
+    max-width: 50%;
+    text-align: left; /* Ganti ke left */
+}
+
+.content h1 {
+    color: #004B84;
+    font-size: 3em;
+    margin: 0;
+    font-size: 80px;
+}
+
+.content p {
+    font-size: 1.4em;
+    margin: 10px 0;
+}
+
+.content p span {
+    font-size: 1.1em;
+    color: #ffffff;
+}
+
+.explore-btn {
+    background-color: #008cff;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+}
+
+.explore-btn:hover {
+    background-color: #006bb3;
+}
+
+.image-container {
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    max-width: 500px;
+    max-height: 500px;
+}
